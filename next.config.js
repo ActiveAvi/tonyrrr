@@ -21,6 +21,9 @@ module.exports = withNextOptimizedImages(
       return {
         '/': { page: '/' },
         '/bio': { page: '/bio' },
+        '/blog': { page: '/blog' },
+        '/projects': { page: '/projects' },
+        '/contact': { page: '/contact' },
       }
     },
   })
