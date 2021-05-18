@@ -5,10 +5,7 @@ import { getPostsMetaData } from '../lib/getPostsData'
 export default function Home({ postsData }) {
   return (
     <div className={styles.infoContainer}>
-      <h1>Index</h1>
-      <Link href='/about'>
-        <a>About</a>
-      </Link>
+      <h1>Welcome aboard fellow freedom-seekers!</h1>
       <picture>
         <source
           srcSet={require('../images/gates-epstein.jpg?webp')}
