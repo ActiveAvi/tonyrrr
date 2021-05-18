@@ -20,6 +20,7 @@ module.exports = withNextOptimizedImages(
     exportPathMap: function () {
       return {
         '/': { page: '/' },
+        '/bio': { page: '/bio' },
       }
     },
   })
