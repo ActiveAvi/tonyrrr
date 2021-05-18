@@ -28,7 +28,7 @@ export default function Home({ postsData }) {
       {postsData.map((metadata) => {
         return (
           <div key={metadata.id}>
-            <Link href={`/blog/${metadata.id}`} key={metadata.title}>
+            <Link href={`/posts/${metadata.id}`} key={metadata.title}>
               <a className={styles.postTitle}> {metadata.title} </a>
             </Link>
             <p className={styles.postDescription}> {metadata.description} </p>
