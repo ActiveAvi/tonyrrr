@@ -1,0 +1,14 @@
+.infoContainer {
+  margin: 0 5% 0 5%;
+}
+
+.infoDescription {
+  font-size: 20px;
+}
+
+.infoImg {
+  width: 40%;
+  max-width: 40%;
+  height: auto;
+  display: block;
+}
