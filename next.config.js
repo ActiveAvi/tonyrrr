@@ -16,5 +16,11 @@ module.exports = withNextOptimizedImages(
     },
     pageExtensions: ['js', 'jsx', 'mdx'],
     target: 'serverless',
+    trailingSlash: true,
+    exportPathMap: function () {
+      return {
+        '/': { page: '/' },
+      }
+    },
   })
 )
