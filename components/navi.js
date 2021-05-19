@@ -12,7 +12,6 @@ export default function Navi() {
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav>
           {menu.map((route) => {
-            console.log(route)
             return (
               <>
                 <Nav.Link href={route}>{route.slice(1)}</Nav.Link>
