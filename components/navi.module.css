@@ -1,0 +1,15 @@
+.brand {
+  margin-left: 12px;
+}
+
+.brand:hover {
+  cursor: pointer;
+}
+
+.toggler {
+  margin-right: 10px;
+}
+
+.navlink {
+  margin-left: 10px;
+}

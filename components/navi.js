@@ -1,20 +1,28 @@
 import Link from 'next/link'
 import { Navbar, Nav, Form, Button, FormControl } from 'react-bootstrap'
+import styles from './navi.module.css'
 
 export default function Navi() {
   const menu = ['/', '/bio', '/blog', '/projects', '/contact']
   return (
     <Navbar bg='dark' variant='dark' expand='lg'>
       <Link href='/'>
-        <Navbar.Brand bg='dark'>TonyRrr!</Navbar.Brand>
+        <Navbar.Brand className={styles.brand} bg='dark'>
+          TonyRrr!
+        </Navbar.Brand>
       </Link>
-      <Navbar.Toggle aria-controls='basic-navbar-nav' />
+      <Navbar.Toggle
+        className={styles.toggler}
+        aria-controls='basic-navbar-nav'
+      />
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav>
           {menu.map((route) => {
             return (
               <>
-                <Nav.Link href={route}>{route.slice(1)}</Nav.Link>
+                <Nav.Link className={styles.navlink} href={route}>
+                  {route.slice(1)}
+                </Nav.Link>
               </>
             )
           })}
