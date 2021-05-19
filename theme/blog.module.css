@@ -1,0 +1,15 @@
+.postsContainer {
+  padding-top: 20px;
+}
+
+.postCard {
+  padding: 10px;
+  width: 80vw;
+  margin: auto;
+}
+
+@media (max-width: 576px) {
+  .postCard {
+    width: 100%;
+  }
+}
