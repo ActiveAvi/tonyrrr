@@ -1,5 +1,5 @@
 import '../theme/global.css'
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Head from 'next/head'
 import Layout from '../components/layout'
 import React from 'react'
