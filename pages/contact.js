@@ -21,7 +21,7 @@ export default function Contact() {
       message,
     }
 
-    fetch(process.env.MAIL_URL, {
+    fetch('http://143.198.120.43/mail', {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
