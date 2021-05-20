@@ -21,7 +21,7 @@ export default function Contact() {
       message,
     }
 
-    fetch('http://143.198.120.43/mail', {
+    fetch('https://api.tonyrrr.dev/mail', {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
