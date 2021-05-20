@@ -63,7 +63,7 @@ export default function Contact() {
             type='text'
           />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className={styles.formWebsite}>
           <Form.Label>Website</Form.Label>
           <Form.Control
             className={styles.formWebsite}
