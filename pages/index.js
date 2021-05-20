@@ -21,21 +21,20 @@ export default function Home() {
         </Container>
       </Jumbotron>
       <Container>
-        <Row>
-          <Col>
-            <Card bg='light' text='dark' style={{ width: '14rem' }}>
-              <Card.Header>
-                <Card.Title>TonyRrr.dev</Card.Title>
-                <Card.Subtitle className='mb-2 text-muted'>
-                  Next.js, Github, IPFS
-                </Card.Subtitle>
-              </Card.Header>
-              <Card.Body>
-                <Card.Text></Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+        <Card bg='light' text='dark' style={{ width: '14rem' }}>
+          <Card.Header>
+            <Card.Title>TonyRrr.dev</Card.Title>
+            <Card.Subtitle className='mb-2 text-muted'>
+              Next.js, Github, IPFS
+            </Card.Subtitle>
+          </Card.Header>
+          <Card.Body>
+            <Card.Text>
+              Personal portfolio / markdown blog site, created using Next.js,
+              and deployed to IPFS using Fleek.
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </Container>
     </div>
   )
