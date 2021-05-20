@@ -6,7 +6,9 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.2.0",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^5.0.0-beta3",
+    "dotenv": "^9.0.2",
     "gray-matter": "^4.0.3",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
