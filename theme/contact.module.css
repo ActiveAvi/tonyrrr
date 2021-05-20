@@ -1,0 +1,15 @@
+.container {
+  padding: 20px;
+}
+
+.container input {
+  max-width: 340px;
+}
+
+.submitBtn {
+  margin-top: 10px;
+}
+
+.formMsg {
+  height: 100px;
+}
