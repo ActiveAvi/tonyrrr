@@ -1,14 +1,19 @@
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Alert } from 'react-bootstrap'
 import styles from '../theme/contact.module.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Contact() {
+  // Form state declarations
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [spam, setSpam] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
+  const router = useRouter()
+
+  // Component functions
   const handleSubmit = (e) => {
     e.preventDefault()
     if (spam) {
@@ -36,8 +41,20 @@ export default function Contact() {
         setEmail('')
         setMessage('')
         setSubmitted(true)
+        setTimeout(() => router.push('/'), 1500)
       }
     })
+  }
+
+  // Variable sub-components
+  let submittedAlert = ''
+
+  if (submitted) {
+    submittedAlert = (
+      <Alert className={styles.infoAlert} variant='info'>
+        Message sent! Redirecting...
+      </Alert>
+    )
   }
 
   return (
@@ -80,6 +97,7 @@ export default function Contact() {
         disabled={submitted}>
         Send
       </Button>
+      {submittedAlert}
     </div>
   )
 }
