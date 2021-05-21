@@ -6,11 +6,11 @@ export default function Home() {
     <div className={styles.pageContainer}>
       <Jumbotron className={styles.jumbo}>
         <Container>
-          <h1>
+          <h1 className='text-light'>
             Welcome aboard, <br />
             freedom-seekers!
           </h1>
-          <p>
+          <p className='text-light'>
             This ship belongs to TonyRrr. I'm a web developer, freedom advocate,
             business creator, and above-all, an autonomous pirate on the nets
             highseas.
