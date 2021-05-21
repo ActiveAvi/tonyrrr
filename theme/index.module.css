@@ -6,7 +6,18 @@
   padding: 7px 0 12px 0;
   border-radius: 0;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
+  background-image: url('../images/the_ship___gumroad_tutorial_by_88grzes_dbpoyb9.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.jumbo div {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 87px;
+  overflow: hidden;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 10px 10px 51px black;
 }
 
 .projectContainer {
@@ -40,6 +51,7 @@
 @media (min-width: 576px) {
   .jumbo {
     padding: 4rem 2rem;
+    min-height: 400px;
   }
 
   .projectContainer h2 {
@@ -54,5 +66,12 @@
 @media (min-width: 992px) {
   .jumbo {
     padding: 4rem 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbo {
+    min-height: 600px;
+    padding: 4rem 18rem;
   }
 }
