@@ -2,12 +2,6 @@
   margin: 0;
 }
 
-@media (min-width: 576px) {
-  .jumbo {
-    padding: 4rem 2rem;
-  }
-}
-
 .jumbo {
   padding: 7px 0 12px 0;
   border-radius: 0;
@@ -15,10 +9,20 @@
   background-color: #e9ecef;
 }
 
+.projectContainer {
+  text-align: center;
+}
+
+.projectContainer h2 {
+  width: max-content;
+  border-bottom: 1px solid black;
+  margin: 30px auto 40px auto;
+  padding-bottom: 4px;
+}
+
 .projectContainerRow {
   --bs-gutter-x: 0;
   justify-content: space-around;
-  text-align: center;
 }
 
 .projectCard {
@@ -30,5 +34,25 @@
 }
 
 .projectCard .card-header {
-  padding-top: 20px;
+  padding-top: 30px;
+}
+
+@media (min-width: 576px) {
+  .jumbo {
+    padding: 4rem 2rem;
+  }
+
+  .projectContainer h2 {
+    margin: 60px auto 20px auto;
+  }
+
+  .projectContainerRow {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbo {
+    padding: 4rem 10rem;
+  }
 }
