@@ -20,7 +20,8 @@ export default function Home() {
           </Button>
         </Container>
       </Jumbotron>
-      <Container>
+      <Container className={styles.projectContainer}>
+        <h2>Projects</h2>
         <Row className={styles.projectContainerRow}>
           <Card className={styles.projectCard} bg='light' text='dark'>
             <Card.Header className='pt-4'>
