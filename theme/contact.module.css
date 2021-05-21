@@ -6,6 +6,11 @@
   max-width: 340px;
 }
 
+.infoAlert {
+  max-width: 340px;
+  margin-top: 10px;
+}
+
 .submitBtn {
   margin-top: 10px;
 }
