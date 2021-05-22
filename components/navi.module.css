@@ -10,10 +10,13 @@
   margin-right: 10px;
 }
 
-.nav {
-  position: sticky;
-  top: 0;
-  transition: top 500ms ease-in-out;
+@media (min-width: 576px) {
+  .nav {
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    transition: top 500ms ease-in-out;
+  }
 }
 
 .navlink {

@@ -35,13 +35,15 @@ export default function Navi() {
   // clean up listener if component unmounts
   useEffect(() => {
     const listener = window.addEventListener('scroll', () => {
-      throttle(handleScroll, 250)
+      throttle(handleScroll, 150)
     })
     return () => window.removeEventListener('scroll', listener)
   }, [])
 
   let navClasses = `${styles.nav} ${styles.scrollUp}`
+
   if (scrollingDown) {
+    console.log(window.innerWidth)
     navClasses = `${styles.nav} ${styles.scrollDown}`
   }
 
