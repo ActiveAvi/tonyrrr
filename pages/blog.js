@@ -1,5 +1,5 @@
 import { getPostsMetaData } from '../lib/getPostsData'
-import styles from '../theme/blog.module.css'
+import styles from '../styles/blog.module.css'
 import Link from 'next/link'
 import { Card, Button } from 'react-bootstrap'
 

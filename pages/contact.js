@@ -1,7 +1,7 @@
-import { Form, Button, Alert } from 'react-bootstrap'
-import styles from '../theme/contact.module.css'
+import styles from '../styles/contact.module.css'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import classes from '../styles/contact.styles.js'
 
 export default function Contact() {
   // Form state declarations
@@ -51,53 +51,47 @@ export default function Contact() {
 
   if (submitted) {
     submittedAlert = (
-      <Alert className={styles.infoAlert} variant='info'>
-        Message sent! Redirecting...
-      </Alert>
+      <span className={classes.infoAlert}>Message sent! Redirecting...</span>
     )
   }
 
   return (
-    <div className={styles.container}>
-      <h1>Send me an email</h1>
-      <Form>
-        <Form.Group>
-          <Form.Label>Name</Form.Label>
-          <Form.Control onChange={(e) => setName(e.target.value)} type='text' />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            onChange={(e) => setEmail(e.target.value)}
-            type='email'
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Message</Form.Label>
-          <Form.Control
-            className={styles.formMsg}
-            onChange={(e) => setMessage(e.target.value)}
-            type='text'
-          />
-        </Form.Group>
-        <Form.Group className={styles.formWebsite}>
-          <Form.Label>Website</Form.Label>
-          <Form.Control
-            className={styles.formWebsite}
+    <div className={classes.formBox}>
+      <form className={classes.form}>
+        <label className={classes.formLabel}>Name</label>
+        <input
+          className={classes.formInput}
+          onChange={(e) => setName(e.target.value)}
+          type='text'
+        />
+        <label className={classes.formLabel}>Email address</label>
+        <input
+          className={classes.formInput}
+          onChange={(e) => setEmail(e.target.value)}
+          type='email'
+        />
+        <label className={classes.formLabel}>Message</label>
+        <textarea
+          className={`${classes.formInput} ${classes.formMsg}`}
+          onChange={(e) => setMessage(e.target.value)}
+          type='text'
+        />
+        <div className={classes.formSite}>
+          <label className={classes.formLabel}>Website</label>
+          <input
+            className={classes.formInput}
             onChange={(e) => setSpam(true)}
             type='text'
           />
-        </Form.Group>
-      </Form>
-      <Button
-        className={styles.submitBtn}
-        onClick={(e) => handleSubmit(e)}
-        variant='primary'
-        type='submit'
-        disabled={submitted}>
-        Send
-      </Button>
-      {submittedAlert}
+        </div>
+        <button
+          className={classes.formButton}
+          onClick={(e) => handleSubmit(e)}
+          type='submit'>
+          Send
+        </button>
+        {submittedAlert}
+      </form>
     </div>
   )
 }
