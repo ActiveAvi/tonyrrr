@@ -3,18 +3,18 @@ import { useState, useEffect } from 'react'
 
 const classes = {
   nav: (scrollingDown) =>
-    `sticky top-0 sm:flex justify-between px-2 py-2 bg-gray-700 text-gray-50 transition-all ${
+    `z-50 sticky top-0 sm:flex justify-between px-2 py-2 bg-gray-700 text-gray-50 transition-all ${
       scrollingDown ? '-top-10' : 'top-0'
     }`,
   navLinks: (showLinks) =>
-    `overflow-hidden block sm:pt-0 sm:opacity-100 sm:h-6 sm:flex transition-all ease-in duration-300 transform sm:translate-x-0 ${
+    `overflow-hidden block sm:pt-1 sm:opacity-100 sm:h-6 sm:flex transition-all ease-in duration-300 transform sm:translate-x-0 ${
       showLinks ? 'h-48 pt-2' : 'h-0 -translate-x-20 opacity-0'
     } `,
   navLink: (showLinks) =>
-    `block sm:inline p-2 uppercase text-md font-mono hover:text-red-200 transition ease-in  ${
+    `block sm:inline px-2 uppercase text-md font-mono hover:text-red-200 transition ease-in  ${
       showLinks ? '' : ''
     }`,
-  brand: 'font-mono text-lg hover:text-red-400 transition',
+  brand: 'font-mono uppercase text-lg hover:text-red-400 transition',
   navSpan: 'flex-grow',
   navButton: 'sm:hidden float-right px-2',
 }
