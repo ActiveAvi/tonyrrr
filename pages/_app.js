@@ -1,4 +1,5 @@
 import '../styles/global.css'
+import 'animate.css/animate.min.css'
 import Head from 'next/head'
 import Layout from '../components/layout'
 import React from 'react'
