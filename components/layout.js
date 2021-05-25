@@ -1,7 +1,7 @@
 import Navi from './navi'
 
 const classes = {
-  main: `bg-gray-900 text-gray-50 font-mono`,
+  main: `text-gray-300 font-mono`,
 }
 
 export default function Layout({ preview, children }) {
