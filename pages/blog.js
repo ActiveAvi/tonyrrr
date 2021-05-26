@@ -1,6 +1,5 @@
 import { getPostsMetaData } from '../lib/getPostsData'
 import styles from '../styles/blog.module.css'
-import Link from 'next/link'
 
 export default function Blog({ postsData }) {
   return (
