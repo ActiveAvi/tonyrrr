@@ -11,6 +11,7 @@ const classes = {
   formButton:
     'bg-blue-600 text-gray-50 px-2 py-1 rounded lowercase transition transform hover:scale-110 hover:bg-yellow-200 hover:text-gray-700',
   infoAlert: 'block mt-3 p-1 rounded text-center bg-yellow-200',
+  contactHeader: 'text-xl w-max m-auto pt-24 pb-5',
 }
 
 export default function Contact() {
@@ -67,6 +68,7 @@ export default function Contact() {
 
   return (
     <div className={classes.formBox}>
+      <h1 className={classes.contactHeader}>#Contact Me</h1>
       <form className={classes.form}>
         <label className={classes.formLabel}>Name</label>
         <input
