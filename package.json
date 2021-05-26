@@ -6,22 +6,23 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.2.0",
-    "bcryptjs": "^2.4.3",
-    "bootstrap": "^5.0.0-beta3",
-    "dotenv": "^9.0.2",
+    "@tailwindcss/typography": "^0.4.0",
     "gray-matter": "^4.0.3",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "next": "^10.2.0",
     "next-mdx-remote": "^3.0.2",
     "next-optimized-images": "^2.6.2",
-    "nodemailer": "^6.6.0",
     "react": "^17.0.2",
-    "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.2",
+    "react-reveal": "^1.2.2",
     "webp-loader": "^0.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.2"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",

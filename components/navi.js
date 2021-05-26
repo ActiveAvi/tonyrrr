@@ -1,14 +1,41 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { Navbar, Nav, Form, Button, FormControl } from 'react-bootstrap'
-import styles from './navi.module.css'
+
+const classes = {
+  nav: (scrollingDown) =>
+    `sticky top-0 sm:flex justify-between px-2 py-2 bg-gray-700 text-gray-50 transition-all ${
+      scrollingDown ? '-top-10' : 'top-0'
+    }`,
+  navLinks: (showLinks) =>
+    `overflow-hidden block sm:pt-0 sm:opacity-100 sm:h-6 sm:flex transition-all ease-in duration-300 transform sm:translate-x-0 ${
+      showLinks ? 'h-48 pt-2' : 'h-0 -translate-x-20 opacity-0'
+    } `,
+  navLink: (showLinks) =>
+    `block sm:inline p-2 uppercase text-md font-mono hover:text-red-200 transition ease-in  ${
+      showLinks ? '' : ''
+    }`,
+  brand: 'font-mono text-lg hover:text-red-400 transition',
+  navSpan: 'flex-grow',
+  navButton: 'sm:hidden float-right px-2',
+}
 
 export default function Navi() {
   const menu = ['/', '/bio', '/blog', '/projects', '/contact']
+  const brand = 'TonyRrr!'
   const [scrollingDown, setScrollingDown] = useState(false)
+  const [showLinks, setShowLinks] = useState()
+
+  // Functions
+  let handleMenuToggle = () => {
+    let navClass = classes.navLinks(showLinks)
+    if (navClass.includes('h-0')) {
+      setShowLinks(true)
+    } else {
+      setShowLinks(false)
+    }
+  }
 
   let previousScrollPosition = 0
-
   const handleScroll = (e) => {
     let currentScrollPosition = window.ScrollY || window.pageYOffset
     if (currentScrollPosition > previousScrollPosition) {
@@ -19,9 +46,7 @@ export default function Navi() {
     previousScrollPosition = currentScrollPosition
   }
 
-  // throttle for the scroll func
   let throttleWait
-
   const throttle = (callback, time) => {
     if (throttleWait) return
     throttleWait = true
@@ -31,8 +56,7 @@ export default function Navi() {
     }, time)
   }
 
-  // set up event listener for scroll
-  // clean up listener if component unmounts
+  // Effects and Clean-up
   useEffect(() => {
     const listener = window.addEventListener('scroll', () => {
       throttle(handleScroll, 150)
@@ -40,35 +64,26 @@ export default function Navi() {
     return () => window.removeEventListener('scroll', listener)
   }, [])
 
-  let navClasses = `${styles.nav} ${styles.scrollUp}`
-
-  if (scrollingDown) {
-    console.log(window.innerWidth)
-    navClasses = `${styles.nav} ${styles.scrollDown}`
-  }
-
   return (
-    <Navbar className={navClasses} bg='dark' variant='dark' expand='sm'>
+    <nav className={classes.nav(scrollingDown)}>
       <Link href='/'>
-        <Navbar.Brand className={styles.brand} bg='dark'>
-          TonyRrr!
-        </Navbar.Brand>
+        <a className={classes.brand}>{brand}</a>
       </Link>
-      <Navbar.Toggle
-        className={styles.toggler}
-        aria-controls='basic-navbar-nav'
-      />
-      <Navbar.Collapse id='basic-navbar-nav'>
-        <Nav>
-          {menu.map((route) => {
-            return (
-              <Nav.Link key={route} className={styles.navlink} href={route}>
-                {route.slice(1)}
-              </Nav.Link>
-            )
-          })}
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+      <span className={classes.navSpan} />
+      <button className={classes.navButton} onClick={() => handleMenuToggle()}>
+        x
+      </button>
+      <ul className={classes.navLinks(showLinks)}>
+        {menu.map((item, index) => (
+          <li key={index}>
+            <Link href={item}>
+              <a className={classes.navLink(showLinks)}>
+                {item != '/' ? item.slice(1) : 'home'}
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   )
 }
