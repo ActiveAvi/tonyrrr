@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 const classes = {
   nav: (scrollingDown) =>
-    `z-50 sticky top-0 sm:flex justify-between px-2 py-2 bg-gray-700 text-gray-50 transition-all ${
+    `z-50 sticky top-0 sm:flex justify-between px-2 py-2 bg-warmgray-900 text-gray-50 transition-all ${
       scrollingDown ? '-top-10' : 'top-0'
     }`,
   navLinks: (showLinks) =>
@@ -11,7 +11,7 @@ const classes = {
       showLinks ? 'h-48 pt-2' : 'h-0 -translate-x-20 opacity-0'
     } `,
   navLink: (showLinks) =>
-    `block sm:inline px-2 uppercase text-md font-mono hover:text-red-200 transition ease-in  ${
+    `block pt-1 pb-2 sm:pb-0 sm:inline px-2 uppercase text-md font-mono hover:text-red-200 transition ease-in  ${
       showLinks ? '' : ''
     }`,
   brand: 'font-mono uppercase text-lg hover:text-red-400 transition',
