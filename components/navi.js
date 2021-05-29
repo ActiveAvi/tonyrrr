@@ -60,7 +60,11 @@ export default function Navi() {
 
   return (
     <>
-      <Helm onClick={() => setShowLinks(!showLinks)} className={classes.helm} />
+      <Helm
+        onSelect={() => setShowLinks(!showLinks)}
+        onClick={() => setShowLinks(!showLinks)}
+        className={classes.helm}
+      />
       <nav className={classes.nav(showLinks)}>
         <Link href='/'>
           <a className={classes.brand}>{brand}</a>
