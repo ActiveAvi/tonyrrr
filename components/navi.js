@@ -28,7 +28,7 @@ import Helm from '../images/004-helm.svg'
 const classes = {
   nav: (showLinks) =>
     `msm:${
-      showLinks ? '' : 'translate-y-full'
+      showLinks ? '' : 'translate-y-800'
     } fixed  msm:p-4 msm:w-screen msm:h-screen z-20 msm:bg-warmgray-900 text-gray-50 text-center overflow-hidden  sm:bg-warmgray-900 sm:w-1/6 sm:h-screen transition-all ease-in duration-300 transform`,
   navLinks: (showLinks) =>
     `sm:block transition-all ease-in duration-300 transform mt-h-30 `,
@@ -60,10 +60,11 @@ export default function Navi() {
 
   return (
     <>
-      <div
-        onSelect={() => setShowLinks(!showLinks)}
-        onClick={() => setShowLinks(!showLinks)}>
-        <Helm className={classes.helm} />
+      <div>
+        <Helm
+          className={classes.helm}
+          onClick={() => setShowLinks(!showLinks)}
+        />
       </div>
 
       <nav className={classes.nav(showLinks)}>
@@ -81,7 +82,6 @@ export default function Navi() {
               </Link>
             </li>
           ))}
-          {showLinks ? 'no' : 'yes'}
         </ul>
       </nav>
     </>
