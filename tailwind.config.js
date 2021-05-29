@@ -17,12 +17,29 @@ module.exports = {
       yellow: colors.amber,
     },
     extend: {
+      screens: {
+        msm: { max: '640px' },
+      },
       transitionProperty: {
         display: 'display',
         height: 'height',
       },
       height: {
         'screen-95': '95vh',
+      },
+      width: {
+        '1/6': '17%',
+        xs: '20rem',
+      },
+      minWidth: {
+        xs: '20rem',
+      },
+      margin: {
+        '1/6': '17%',
+        '1/2': '50%',
+        '1/4': '25%',
+        '1/3': '33%',
+        'h-30': '30vh',
       },
       boxShadow: {
         big: '0 45px 60px 24px rgb(0 0 0 / 70%), 0 23px 56px 33px rgb(250 250 250 / 45%)',
