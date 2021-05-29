@@ -60,11 +60,12 @@ export default function Navi() {
 
   return (
     <>
-      <Helm
+      <div
         onSelect={() => setShowLinks(!showLinks)}
-        onClick={() => setShowLinks(!showLinks)}
-        className={classes.helm}
-      />
+        onClick={() => setShowLinks(!showLinks)}>
+        <Helm className={classes.helm} />
+      </div>
+
       <nav className={classes.nav(showLinks)}>
         <Link href='/'>
           <a className={classes.brand}>{brand}</a>
@@ -80,6 +81,7 @@ export default function Navi() {
               </Link>
             </li>
           ))}
+          {showLinks ? 'no' : 'yes'}
         </ul>
       </nav>
     </>
