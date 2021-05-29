@@ -1,10 +1,10 @@
 import Fade from 'react-reveal/Fade'
 
 const classes = {
-  container: `pt-20 pb-10 px-6 max-w-5xl m-auto`,
-  header: `text-white text-3xl max-w-lg m-auto`,
-  cardBox: `sm:flex`,
-  card: ` my-16 max-w-xs p-6`,
+  container: `pt-20 pb-10 sm:px-20 flex flex-wrap`,
+  header: `text-white text-2xl px-2 mb-10 min-w-xs`,
+  cardBox: ``,
+  card: ` mb-16 max-w-xs p-2`,
   cardImg: ``,
   cardHeader: `text-red-400`,
   cardBody: ``,
@@ -16,8 +16,8 @@ const classes = {
 export default function Services() {
   return (
     <div className={classes.container}>
-      <Fade>
-        <h3 className={classes.header}>#Goods and Services</h3>
+      <Fade left>
+        <h3 className={classes.header}>#Services</h3>
       </Fade>
 
       <div className={classes.cardBox}>
