@@ -7,28 +7,10 @@ import { useRouter } from 'next/router'
 import styles from '../styles/navi.module.css'
 import Helm from '../images/004-helm.svg'
 
-// const classes = {
-//   nav: (scrollingDown) =>
-//     `z-50 sticky top-0 sm:flex justify-between px-2 py-2 bg-warmgray-900 text-gray-50 transition-all ${
-//       scrollingDown ? '-top-10' : 'top-0'
-//     }`,
-//   navLinks: (showLinks) =>
-//     `overflow-hidden block sm:pt-1 sm:opacity-100 sm:h-6 sm:flex transition-all ease-in duration-300 transform sm:translate-x-0 ${
-//       showLinks ? 'h-48 pt-2' : 'h-0 -translate-x-20 opacity-0'
-//     } `,
-//   navLink: (showLinks) =>
-//     `block pt-1 pb-2 sm:pb-0 sm:inline px-2 uppercase text-md font-mono hover:text-red-200 transition ease-in  ${
-//       showLinks ? '' : ''
-//     }`,
-//   brand: 'font-mono uppercase text-lg hover:text-red-400 transition',
-//   navSpan: 'flex-grow',
-//   navButton: 'sm:hidden',
-// }
-
 const classes = {
   nav: (showLinks) =>
-    `msm:${
-      showLinks ? '' : 'translate-y-800'
+    `${
+      showLinks ? '' : 'msm:translate-y-p-800'
     } fixed  msm:p-4 msm:w-screen msm:h-screen z-20 msm:bg-warmgray-900 text-gray-50 text-center overflow-hidden  sm:bg-warmgray-900 sm:w-1/6 sm:h-screen transition-all ease-in duration-300 transform`,
   navLinks: (showLinks) =>
     `sm:block transition-all ease-in duration-300 transform mt-h-30 `,
@@ -42,30 +24,14 @@ const classes = {
 }
 
 export default function Navi() {
-  const router = useRouter()
   const menu = ['/', '/bio', '/blog', '/projects', '/contact']
   const brand = 'TonyRrr!'
-  const [scrollingDown, setScrollingDown] = useState(false)
-  const [showLinks, setShowLinks] = useState()
-  console.log(showLinks)
+  const [showLinks, setShowLinks] = useState(false)
   // Functions
-  let handleMenuToggle = () => {
-    let navClass = classes.nav(showLinks)
-    if (navClass.includes('hidden')) {
-      setShowLinks(true)
-    } else {
-      setShowLinks(false)
-    }
-  }
 
   return (
     <>
-      <div>
-        <Helm
-          className={classes.helm}
-          onClick={() => setShowLinks(!showLinks)}
-        />
-      </div>
+      <Helm className={classes.helm} onClick={() => setShowLinks(!showLinks)} />
 
       <nav className={classes.nav(showLinks)}>
         <Link href='/'>

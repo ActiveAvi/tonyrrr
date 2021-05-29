@@ -17,7 +17,7 @@ module.exports = {
       yellow: colors.amber,
     },
     extend: {
-      spacing: { 800: '800px' },
+      spacing: { 'p-800': '800px' },
       screens: {
         msm: { max: '640px' },
       },
