@@ -2,7 +2,7 @@ import styles from '../styles/hero.module.css'
 import Link from 'next/link'
 
 const classes = {
-  hero: `pt-36 bg-center bg-cover h-screen-95 text-center`,
+  hero: `pt-36 bg-center bg-cover h-screen text-center`,
   heroHeader: `text-lg sm:text-2xl font-medium text-gray-50 max-w-xs`,
   heroText: `text-gray-50 mb-6 max-w-sm w-max`,
   heroInner: `grid grid-cols-1 content-center justify-items-center m-auto w-11/12 max-w-lg h-56  bg-gray-900 bg-opacity-40 min-h-40 rounded-full shadow-big`,
