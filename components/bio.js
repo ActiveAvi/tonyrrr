@@ -1,10 +1,10 @@
-import Zoom from 'react-reveal/Zoom'
+import Fade from 'react-reveal/Fade'
 
 const classes = {
-  bioSection: `bg-warmgray-900 pb-10`,
+  bioSection: `bg-warmgray-800 pb-10 sm:px-20 flex flex-wrap`,
   bioContainer: `p-6 max-w-lg m-auto`,
-  bioHeader: `py-10 text-3xl`,
-  bioText: ``,
+  bioHeader: `px-2 text-2xl min-w-xs mb-10`,
+  bioText: `px-2 max-w-lg`,
 }
 
 export default function Bio() {
@@ -12,24 +12,22 @@ export default function Bio() {
   // JSX
   return (
     <section className={classes.bioSection}>
-      <div className={classes.bioContainer}>
-        <Zoom>
-          <h1 className={classes.bioHeader}>#Who goes there?</h1>
-        </Zoom>
+      <Fade left>
+        <h1 className={classes.bioHeader}>#Bio</h1>
+      </Fade>
 
-        <Zoom>
-          <p className={classes.bioText}>
-            Salutations! I be TonyRrrr, a farm-raised, nature-loving,
-            techy-geared, mad-libbing, autonomy-spreading, freedom lover, and
-            this site is a transport vehicle for my public goods and services.
-            If you're looking to float a website or app on the seas of the Open
-            Net, I offer consultation and development services. Focusing on
-            decentralization technologies such as IPFS, ENS, and IC, my aim is
-            to take power away from the Internet authorities and give it back to
-            the freedom-seeking web pirates.
-          </p>
-        </Zoom>
-      </div>
+      <Fade bottom>
+        <p className={classes.bioText}>
+          Salutations! I be TonyRrrr, a farm-raised, nature-loving,
+          techy-geared, mad-libbing, autonomy-spreading, freedom lover, and this
+          site is a transport vehicle for my public goods and services. If
+          you're looking to float a website or app on the seas of the Open Net,
+          I offer consultation and development services. Focusing on
+          decentralization technologies such as IPFS, ENS, and IC, my aim is to
+          take power away from the Internet authorities and give it back to the
+          freedom-seeking web pirates.
+        </p>
+      </Fade>
     </section>
   )
 }
