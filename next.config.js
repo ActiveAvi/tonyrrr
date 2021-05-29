@@ -1,10 +1,24 @@
-// const withNextOptimizedImages = require('next-optimized-images')
-
-const withMDX = require('@next/mdx')({
+const optimizedImages = require('next-optimized-images')
+const withPlugins = require('next-compose-plugins')
+const SVGR = require('next-plugin-svgr')
+const MDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 })
 
-module.exports = withMDX({
+const nextConfig = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: 'images/[hash]-[name].[ext]' },
+          },
+        ],
+      },
+    ],
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.node = {
@@ -25,4 +39,28 @@ module.exports = withMDX({
       '/contact': { page: '/contact' },
     }
   },
-})
+}
+
+module.exports = withPlugins(
+  [
+    // [
+    //   optimizedImages,
+    //   {
+    //     /* config */
+    //   },
+    // ],
+    [
+      SVGR,
+      {
+        /* config */
+      },
+    ],
+    [
+      MDX,
+      {
+        /* config */
+      },
+    ],
+  ],
+  nextConfig
+)
