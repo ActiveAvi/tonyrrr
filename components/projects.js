@@ -1,11 +1,12 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
+import Fade from 'react-reveal/Fade'
 
 const classes = {
-  projectSection: `pb-20 bg-warmgray-900 `,
-  projectHeader: 'px-6 py-14 text-3xl max-w-lg m-auto',
+  projectSection: `pb-20 sm:px-20 bg-warmgray-800 `,
+  projectHeader: 'px-2 py-14 text-2xl min-w-xs',
   project: 'py-40',
-  carousel: 'sm:px-20 md:px-40',
+  carousel: 'md:px-20',
 }
 
 export default function Projects() {
@@ -14,7 +15,10 @@ export default function Projects() {
   // JSX
   return (
     <section className={classes.projectSection}>
-      <h1 className={classes.projectHeader}>#Projects</h1>
+      <Fade left>
+        <h1 className={classes.projectHeader}>#Projects</h1>
+      </Fade>
+
       <Carousel className={classes.carousel} showThumbs={false}>
         <div className={classes.project}>
           <h3>Project 1</h3>
