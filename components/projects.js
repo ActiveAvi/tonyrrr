@@ -5,8 +5,9 @@ import Fade from 'react-reveal/Fade'
 const classes = {
   projectSection: `pb-20 sm:px-20 bg-warmgray-800 `,
   projectHeader: 'px-2 py-14 text-2xl min-w-xs',
-  project: 'py-40',
+  project: 'py-28 px-10 sm:px-16',
   carousel: 'md:px-20',
+  projectLink: 'text-yellow-100',
 }
 
 export default function Projects() {
@@ -21,24 +22,46 @@ export default function Projects() {
 
       <Carousel className={classes.carousel} showThumbs={false}>
         <div className={classes.project}>
-          <h3>Project 1</h3>
+          <h3>
+            Project 1:{' '}
+            <a className={classes.projectLink} href='https://tonyrrr.dev'>
+              tonyrrr.dev
+            </a>
+          </h3>
           <p>
-            project one description, and description of what i did for the
-            project, goes here
+            This static site was created by me using the following tech-stack:
+          </p>
+          <ul>
+            <li>[frontend]: NextJs, Tailwindcss</li>
+            <li>[backend]: IPFS, NodeJs + Express for API</li>
+          </ul>
+          <p>
+            The site is hosted on IPFS, but also has a remote server for secured
+            endpoints!
           </p>
         </div>
         <div className={classes.project}>
-          <h3>Project 2</h3>
+          <h3>
+            Project 2:{' '}
+            <a className={classes.projectLink} href='https://getautonomy.info'>
+              getautonomy.info
+            </a>
+          </h3>
           <p>
-            project two description, and description of what i did for the
-            project, goes here
+            There isn't much I holder closer to my heart than Autonomy. Back in
+            2019 I: worked on the landing page and CRM automation.
           </p>
         </div>
         <div className={classes.project}>
-          <h3>Project 3</h3>
+          <h3>
+            Project 3:{' '}
+            <a className={classes.projectLink} href='https://badnarik.org/'>
+              badnarik.org
+            </a>
+          </h3>
           <p>
-            project three description, and description of what i did for the
-            project, goes here
+            Badnarik doesn't beat around the bush, that's why I like him. I got
+            the pleasure of setting up the ecommerce store for his site.
           </p>
         </div>
       </Carousel>
