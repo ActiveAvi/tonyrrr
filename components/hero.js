@@ -10,9 +10,11 @@ const classes = {
 }
 
 export default function Hero({ img, header, text, button }) {
-  let heroHeader = header || 'Welcome! Greetings and salutations friend.'
-  let heroText = text || 'This is the hero body!'
-  let heroButton = button || 'Consult with me'
+  let heroHeader = header || 'Web Development befitting a pirate'
+  let heroText =
+    text ||
+    `Hi, I'm TonyRrr! I like to build things on the Internet, especially the decentralized parts.`
+  let heroButton = button || 'Work with me'
 
   return (
     <div className={`${classes.hero} ${styles.heroImg}`}>
