@@ -11,7 +11,7 @@ const classes = {
   serviceSpeed: ``,
   serviceDecentral: ``,
   serviceMobile: '',
-  hash: 'text-green-400 font-extrabold text-2xl',
+  hash: 'text-blue-400 font-extrabold text-2xl',
 }
 
 export default function Services() {

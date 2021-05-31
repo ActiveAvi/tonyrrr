@@ -8,7 +8,7 @@ const classes = {
   project: 'py-28 px-10 sm:px-16',
   carousel: 'md:px-20',
   projectLink: 'text-yellow-100',
-  hash: 'text-green-400 font-extrabold text-2xl',
+  hash: 'text-blue-400 font-extrabold text-2xl',
 }
 
 export default function Projects() {

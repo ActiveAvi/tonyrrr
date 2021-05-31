@@ -5,7 +5,7 @@ const classes = {
   bioContainer: `p-6 max-w-lg m-auto`,
   bioHeader: ` px-2 text-3xl min-w-xs mb-10`,
   bioText: `px-2 max-w-lg`,
-  hash: 'text-green-400 text-2xl font-extrabold',
+  hash: 'text-blue-400 text-2xl font-extrabold',
 }
 
 export default function Bio() {
