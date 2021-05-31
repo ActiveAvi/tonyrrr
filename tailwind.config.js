@@ -15,6 +15,7 @@ module.exports = {
       red: colors.red,
       blue: colors.lightBlue,
       yellow: colors.amber,
+      green: colors.emerald,
     },
     extend: {
       spacing: { 'p-800': '800px' },
