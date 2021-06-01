@@ -2,33 +2,21 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { getAllPostsPath, getPostData } from '../../lib/getPostsData.js'
 
-const components = {
-  h1: (props) => (
-    <h1
-      style={{
-        fontSize: 'calc(1rem + 1.5vw)',
-        color: 'black',
-        margin: '1vh 0 1vh 0',
-      }}
-      {...props}
-    />
-  ),
+const classes = {
+  blog: 'p-2',
+  header: `text-xl`,
+  body: ``,
+}
 
-  p: (props) => (
-    <p
-      style={{
-        fontSize: 'calc(1rem + 0.1vw)',
-        color: '#000000e6',
-        margin: '0vh 0 1vh 0',
-      }}
-      {...props}
-    />
-  ),
+const components = {
+  h1: (props) => <h1 className={classes.header} {...props} />,
+
+  p: (props) => <p className={classes.body} {...props} />,
 }
 
 export default function Blog({ postMetadata, postContent }) {
   return (
-    <div>
+    <div className={classes.blog}>
       <MDXRemote {...postContent} components={components} />
 
       <style jsx>{`
