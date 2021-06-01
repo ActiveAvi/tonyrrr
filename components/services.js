@@ -1,7 +1,7 @@
 import Fade from 'react-reveal/Fade'
 
 const classes = {
-  container: `pt-20 pb-10 sm:px-20 flex flex-wrap`,
+  container: `pt-20 sm:px-20 flex flex-wrap`,
   header: `text-white text-3xl px-2 mb-10 min-w-xs`,
   cardBox: ``,
   card: ` mb-16 max-w-xs p-2`,
