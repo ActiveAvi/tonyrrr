@@ -1,14 +1,27 @@
 import { getPostsMetaData } from '../lib/getPostsData'
 import styles from '../styles/blog.module.css'
 
+const classes = {
+  blog: 'p-2',
+  post: 'p-4',
+  title: 'text-lg',
+  date: 'text-sm',
+  desc: '',
+  link: '',
+}
+
 export default function Blog({ postsData }) {
   return (
-    <div className={styles.postsContainer}>
+    <div className={classes.blog}>
       {postsData.map((metadata) => {
         return (
-          <div>
-            <h2>{metadata.title}</h2>
-            <p>{metadata.description}</p>
+          <div className={classes.post}>
+            <h2 className={classes.title}>{metadata.title}</h2>
+            <span className={classes.date}>{metadata.date}</span>
+            <p className={classes.desc}>{metadata.description}</p>
+            <a className={classes.link} href={`/blog/${metadata.id}`}>
+              Read more
+            </a>
           </div>
         )
       })}
