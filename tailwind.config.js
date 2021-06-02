@@ -18,7 +18,7 @@ module.exports = {
       green: colors.emerald,
     },
     extend: {
-      spacing: { 'p-800': '800px' },
+      spacing: { 'p-800': '850px' },
       screens: {
         msm: { max: '640px' },
       },
