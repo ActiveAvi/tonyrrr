@@ -41,7 +41,7 @@ module.exports = {
         '1/2': '50%',
         '1/4': '25%',
         '1/3': '33%',
-        'screenh-35': '35vh',
+        'screenh-35': '25vh',
       },
       boxShadow: {
         big: '0 45px 60px 24px rgb(0 0 0 / 70%), 0 23px 56px 33px rgb(250 250 250 / 45%)',
