@@ -32,6 +32,7 @@ module.exports = {
       width: {
         '1/6': '17%',
         xs: '20rem',
+        fit: 'fit-content',
       },
       minWidth: {
         xs: '20rem',

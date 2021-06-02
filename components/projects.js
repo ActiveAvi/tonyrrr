@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade'
 
 const classes = {
   projectSection: `pb-20 py-14 sm:px-20 `,
-  projectHeader: 'px-2 text-3xl min-w-xs',
+  projectHeader: 'px-1 text-3xl min-w-xs',
   project: 'py-28 px-10 sm:px-16',
   carousel: 'md:px-20',
   projectLink: 'text-yellow-100',

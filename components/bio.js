@@ -3,8 +3,8 @@ import Fade from 'react-reveal/Fade'
 const classes = {
   bioSection: `py-14 bg-warmgray-800 pb-10 sm:px-20 flex flex-wrap`,
   bioContainer: `p-6 max-w-lg m-auto`,
-  bioHeader: ` px-2 text-3xl min-w-xs mb-10`,
-  bioText: `px-2 max-w-lg`,
+  bioHeader: ` px-1 text-3xl min-w-xs mb-10`,
+  bioText: `px-5 max-w-lg`,
   hash: 'text-blue-400 text-2xl font-extrabold',
 }
 
