@@ -20,6 +20,7 @@ const classes = {
   navSpan: 'flex-grow',
   navButton: 'sm:hidden',
   helm: 'z-30 h-14 w-14 fixed bottom-0 right-0 mr-2 mb-2 sm:hidden animate-spin-slow',
+  avatar: 'rounded-full mt-6 w-20 mx-auto',
 }
 
 export default function Navi() {
@@ -50,6 +51,8 @@ export default function Navi() {
         <Link href='/'>
           <a className={classes.brand}>{brand}</a>
         </Link>
+
+        <img className={classes.avatar} src='../avatar.jpeg' />
 
         <ul className={classes.navLinks(showLinks)}>
           {menu.map((item, index) => (
