@@ -1,5 +1,4 @@
 import { getPostsMetaData } from '../lib/getPostsData'
-import styles from '../styles/blog.module.css'
 
 const classes = {
   blog: 'p-2',
