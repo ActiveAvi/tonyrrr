@@ -1,6 +1,5 @@
-const optimizedImages = require('next-optimized-images')
 const withPlugins = require('next-compose-plugins')
-const SVGR = require('next-plugin-svgr')
+const optimizedImages = require('next-optimized-images')
 const MDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 })
@@ -43,24 +42,8 @@ const nextConfig = {
 
 module.exports = withPlugins(
   [
-    // [
-    //   optimizedImages,
-    //   {
-    //     /* config */
-    //   },
-    // ],
-    [
-      SVGR,
-      {
-        /* config */
-      },
-    ],
-    [
-      MDX,
-      {
-        /* config */
-      },
-    ],
+    [optimizedImages, {}],
+    [MDX, {}],
   ],
   nextConfig
 )
