@@ -41,7 +41,7 @@ export default function Navi() {
   return (
     <>
       <img
-        src={require('../images/004-helm.svg')}
+        src={require('../images/icons/004-helm.svg')}
         className={classes.helm}
         onClick={() => setShowLinks(!showLinks)}
       />
