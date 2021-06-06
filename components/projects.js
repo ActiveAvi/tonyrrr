@@ -1,14 +1,16 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import Fade from 'react-reveal/Fade'
+import Image from 'next/image'
 
 const classes = {
   projectSection: `pb-20 py-14 sm:px-20 `,
   projectHeader: 'px-1 text-3xl min-w-xs',
-  project: 'py-28 px-10 sm:px-16',
+  project: 'max-w-lg m-auto py-28 px-10 sm:px-16',
   carousel: 'md:px-20',
   projectLink: 'text-yellow-100',
   hash: 'text-blue-400 font-extrabold text-2xl',
+  image: 'my-5 max-w-sm shadow-lg transition transform hover:scale-95',
 }
 
 export default function Projects() {
@@ -26,6 +28,14 @@ export default function Projects() {
       <Fade bottom>
         <Carousel className={classes.carousel} showThumbs={false}>
           <div className={classes.project}>
+            <Image
+              src='/tonyrrr.png'
+              alt='tonyrrr.dev'
+              width={'fit'}
+              height={'fit'}
+              className={classes.image}
+              style={{ pointerEvents: 'all' }}
+            />
             <h3>
               Project 1:{' '}
               <a className={classes.projectLink} href='https://tonyrrr.dev'>
@@ -45,6 +55,14 @@ export default function Projects() {
             </p>
           </div>
           <div className={classes.project}>
+            <Image
+              src='/getautonomy.png'
+              alt='getautonomy.info'
+              width={'fit'}
+              height={'fit'}
+              className={classes.image}
+              style={{ pointerEvents: 'all' }}
+            />
             <h3>
               Project 2:{' '}
               <a
@@ -54,11 +72,19 @@ export default function Projects() {
               </a>
             </h3>
             <p>
-              There isn't much I holder closer to my heart than Autonomy. Back
-              in 2019 I: worked on the landing page and CRM automation.
+              There isn't much I hold closer to my heart than Autonomy. Back in
+              2019 I: worked on the landing page and CRM automation.
             </p>
           </div>
           <div className={classes.project}>
+            <Image
+              src='/badnarik.png'
+              alt='badnarik.org'
+              width={'fit'}
+              height={'fit'}
+              className={classes.image}
+              style={{ pointerEvents: 'all' }}
+            />
             <h3>
               Project 3:{' '}
               <a className={classes.projectLink} href='https://badnarik.org/'>
