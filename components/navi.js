@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
-
-/*stylesheets and images*/
-import styles from '../styles/navi.module.css'
-import Helm from '../images/004-helm.svg'
+import Link from 'next/link'
 
 const classes = {
   nav: (showLinks) =>
@@ -45,18 +40,20 @@ export default function Navi() {
   }
   return (
     <>
-      <Helm className={classes.helm} onClick={() => setShowLinks(!showLinks)} />
+      <img
+        src={require('../images/004-helm.svg')}
+        className={classes.helm}
+        onClick={() => setShowLinks(!showLinks)}
+      />
 
       <nav className={classes.nav(showLinks)}>
         <Link href='/'>
           <a className={classes.brand}>{brand}</a>
         </Link>
 
-        <Image
-          src='/avatar.jpeg'
+        <img
+          src={require('../images/avatar.jpeg')}
           alt='pic of TonyRrr!'
-          width={'100'}
-          height={'100'}
           className={classes.avatar}
         />
 

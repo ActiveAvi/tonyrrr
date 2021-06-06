@@ -1,4 +1,3 @@
-import styles from '../styles/hero.module.css'
 import Link from 'next/link'
 
 const classes = {
@@ -17,7 +16,11 @@ export default function Hero({ img, header, text, button }) {
   let heroButton = button || 'Work with me'
 
   return (
-    <div className={`${classes.hero} ${styles.heroImg}`}>
+    <div
+      className={`${classes.hero}`}
+      style={{
+        backgroundImage: 'url(' + require('../images/theship.jpeg') + ')',
+      }}>
       <div className={classes.heroInner}>
         <h1 className={classes.heroHeader}>{heroHeader}</h1>
         <p className={classes.heroText}>{heroText}</p>

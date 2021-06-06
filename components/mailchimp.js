@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const classes = {
   content: 'pb-20',
 }
