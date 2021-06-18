@@ -48,8 +48,6 @@ It's time to make our Domain point to our Gitea Apps IP address.
 
 Head over to your registrar and into your DNS settings. Add an **A Record** pointing to your droplets IP. It's as simple as that! Give the DNS some time to propogate, and your domain name should now be connected.
 
-![[Pasted image 20210618095720.png]]
-
 In my case, I pointed the subdomain _git.tonyrrr.dev_ to the droplet.
 
 ERROR: I messed up and accidentally used gitea as the sub-domain instead of git. Had to go back and change this later :D
@@ -104,11 +102,17 @@ It's time to add the proxy rules to the nginx config file located at **/etc/ngin
 
 ```shell
 server {
-	server_name yourdomain.com
-	location / {
-		proxy_pass http://localhost:3000
-	}
+server_name yourdomain.com
+location / {
+proxy_pass http://localhost:3000
 }
+}
+```
+
+While we're at it, add this rule to the http to increase the max file size that nginx will accept. Without this, I was not able to push to my repos. Some people said they needed more than 50m, but I'll leave that up to you.
+
+```shell
+client_max_body_size 50m;
 ```
 
 This is telling nginx to listen and serve up whatever is at localhost:3000, which just so happens to be where Gitea is hanging out. After the changes have been made and saved, restart nginx.
@@ -144,5 +148,7 @@ If you head over to your chosen domain for Gitea via a web browser, the App shou
 ## References & Sources
 
 - https://gitea.io/
-  - https://docs.gitea.io/en-us/https-setup/
+- https://docs.gitea.io/en-us/https-setup/
 - https://digitalocean.com
+- https://msiedlaczek.com/til/gitea/
+- [git - Github Push Error: RPC failed; result=22, HTTP code = 413 - Stack Overflow](https://stackoverflow.com/questions/7489813/github-push-error-rpc-failed-result-22-http-code-413)

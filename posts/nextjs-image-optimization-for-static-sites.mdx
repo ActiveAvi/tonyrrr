@@ -1,0 +1,57 @@
+---
+title: 'NextJs Image Optimization for Static Sites'
+description: ''
+date: 06-7-2021
+featured: true
+---
+
+# NextJs Image Optimiziation for Static Sites
+
+## No image optimization out of the box for static sites
+
+When working on this site, I ran into an issue: I couldn't optimize my images when exporting the site build!
+
+According to the Nextjs docs:
+
+> The next/image component's default loader is not supported when using next export. However, other loader options will work.
+
+What other loader options are we talking about?
+
+## Setting Up Next-optimized-images
+
+This [package](https://github.com/cyrilwanner/next-optimized-images) is the solution I found.
+
+Let's install the package into our NextJs project.
+
+```shell
+npm i next-optimized-images
+```
+
+Now head over to your **next.config.js** file, where we'll be adding the plugin.
+
+Here's what it looks like using **next-compose-plugins**
+
+```js
+const withPlugins = require('next-compose-plugins')
+const optimizedImages = require('next-optimized-images')
+
+const nextConfig = {
+  webpack: (config, { isServer }) => {
+    return config
+  },
+}
+
+module.exports = withPlugins([[optimizedImages, {}]], nextConfig)
+```
+
+And if you're not using **next-compose-plugins**, you can instead wrap webpack with **next-optimized-images** in the module exports.
+
+```js
+const withOptimizedImages = require('next-optimized-images')
+
+module.exports = withOptimizedImages(
+  {
+    webpack: () => {...},
+  }
+)
+```
