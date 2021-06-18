@@ -24,14 +24,12 @@ export default function Projects() {
       <Fade bottom>
         <Carousel className={classes.carousel} showThumbs={false}>
           <div className={classes.project}>
-            <picture>
-              <img
-                src={require('../images/tonyrrr.png')}
-                alt='tonyrrr.dev'
-                className={classes.image}
-                style={{ pointerEvents: 'all' }}
-              />
-            </picture>
+            <img
+              src={require('../images/tonyrrr.png?size=300')}
+              alt='tonyrrr.dev'
+              className={classes.image}
+              style={{ pointerEvents: 'all' }}
+            />
 
             <h3>
               Project 1:{' '}
@@ -53,7 +51,7 @@ export default function Projects() {
           </div>
           <div className={classes.project}>
             <img
-              src={require('../images/getautonomy.png')}
+              src={require('../images/getautonomy.png?size=400')}
               alt='getautonomy.info'
               className={classes.image}
               style={{ pointerEvents: 'all' }}
@@ -73,7 +71,7 @@ export default function Projects() {
           </div>
           <div className={classes.project}>
             <img
-              src={require('../images/badnarik.png')}
+              src={require('../images/badnarik.png?size=400')}
               alt='badnarik.org'
               className={classes.image}
               style={{ pointerEvents: 'all' }}
