@@ -29,7 +29,7 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx'],
   target: 'serverless',
   trailingSlash: true,
-  assetPrefix: './',
+  // assetPrefix: './',
   exportPathMap: function () {
     return {
       '/': { page: '/' },
