@@ -1,59 +1,48 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
+  purge: ['./src/**/*.tsx'],
   theme: {
-    colors: {
-      // Build your palette here
-      transparent: 'transparent',
-      current: 'currentColor',
-      gray: colors.trueGray,
-      bluegray: colors.blueGray,
-      coolgray: colors.coolGray,
-      warmgray: colors.warmGray,
-      red: colors.red,
-      blue: colors.lightBlue,
-      yellow: colors.amber,
-      green: colors.emerald,
-    },
     extend: {
-      spacing: { 'p-800': '850px' },
-      screens: {
-        msm: { max: '640px' },
+      colors: {
+        redviolet: '#C71585',
       },
-      transitionProperty: {
-        display: 'display',
-        height: 'height',
+      spacing: {
+        144: '34rem',
       },
-      height: {
-        'screen-95': '95vh',
-      },
-      width: {
-        '1/6': '17%',
-        xs: '20rem',
-        fit: 'fit-content',
-      },
-      minWidth: {
-        xs: '20rem',
-      },
-      margin: {
-        '1/6': '17%',
-        '1/2': '50%',
-        '1/4': '25%',
-        '1/3': '33%',
-        'screenh-35': '25vh',
-      },
-      boxShadow: {
-        big: '0 45px 60px 24px rgb(0 0 0 / 70%), 0 23px 56px 33px rgb(250 250 250 / 45%)',
-      },
-      animation: {
-        'spin-slow': 'spin 10s linear infinite',
+      typography(theme) {
+        return {
+          dark: {
+            css: {
+              color: theme('colors.gray.300'),
+              '[class~="lead"]': { color: theme('colors.gray.400') },
+              a: { color: theme('colors.gray.100') },
+              strong: { color: theme('colors.gray.100') },
+              'ul > li::before': { backgroundColor: theme('colors.blue.400') },
+              hr: { borderColor: theme('colors.gray.500') },
+              blockquote: {
+                color: theme('colors.gray.100'),
+                borderLeftColor: theme('colors.gray.800'),
+              },
+              h1: { color: theme('colors.gray.100') },
+              h2: { color: theme('colors.gray.100') },
+              h3: { color: theme('colors.gray.100') },
+              h4: { color: theme('colors.gray.100') },
+              code: { color: theme('colors.gray.100') },
+              'a code': { color: theme('colors.gray.100') },
+              pre: {
+                color: theme('colors.gray.200'),
+                backgroundColor: theme('colors.gray.800'),
+              },
+              thead: {
+                color: theme('colors.gray.100'),
+                borderBottomColor: theme('colors.gray.700'),
+              },
+              'tbody tr': { borderBottomColor: theme('colors.gray.800') },
+            },
+          },
+        }
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [require('@tailwindcss/typography')],
 }
