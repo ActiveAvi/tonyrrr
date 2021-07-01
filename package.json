@@ -1,52 +1,41 @@
 {
-  "name": "tonyrrr",
+  "name": "hello-nuxt",
   "version": "1.0.0",
-  "description": "",
-  "main": "sample.js",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js"
+  },
   "dependencies": {
-    "@babel/core": "^7.14.3",
-    "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^10.2.0",
-    "@tailwindcss/typography": "^0.4.0",
-    "gray-matter": "^4.0.3",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^9.0.0",
-    "jimp": "^0.16.1",
-    "next": "^10.2.0",
-    "next-compose-plugins": "^2.2.1",
-    "next-mdx-remote": "^3.0.2",
-    "next-optimized-images": "^2.6.2",
-    "prismjs": "^1.23.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-responsive-carousel": "^3.2.18",
-    "react-reveal": "^1.2.2",
-    "responsive-loader": "^2.3.0",
-    "svg-sprite-loader": "^6.0.7",
-    "webp-loader": "^0.6.0"
+    "@mdi/font": "^5.9.55",
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/color-mode": "^2.0.10",
+    "@nuxtjs/composition-api": "^0.24.4",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@tailwindcss/typography": "0.3.0",
+    "core-js": "^3.9.1",
+    "lodash": "^4.17.21",
+    "nuxt": "^2.15.3",
+    "prism-themes": "^1.7.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.3.0",
-    "tailwindcss": "^2.1.2"
-  },
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export",
-    "deploy": "npm run build && npm run export"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ActiveAvi/tonyrrr.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ActiveAvi/tonyrrr/issues"
-  },
-  "homepage": "https://github.com/ActiveAvi/tonyrrr#readme"
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/tailwindcss": "^4.2.0",
+    "@tailwindcss/postcss7-compat": "^2.2.2",
+    "autoprefixer": "^9",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.7.0",
+    "postcss": "^8.3.5",
+    "prettier": "^2.2.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  }
 }
