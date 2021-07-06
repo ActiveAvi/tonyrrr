@@ -8,3 +8,7 @@
   transform: scaleX(0);
   opacity: 20%;
 }
+
+html {
+  background-color: rgba(91, 33, 182, 1);
+}
