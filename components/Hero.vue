@@ -35,8 +35,8 @@ export default {
       classes: {
         section:
           'h-screen bg-black overflow-hidden grid sm:grid-cols-2 content-center justify-items-center',
-        imgbox: 'sm:mt-16',
-        img: ' 2xl:mt-44',
+        imgbox: '',
+        img: 'md:mt-32',
         inner: 'max-w-sm self-center',
         header: 'text-2xl cursor-default',
         button:
