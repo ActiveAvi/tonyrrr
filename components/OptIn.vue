@@ -10,6 +10,7 @@
         Digital Business Tips, Matrix Hacks, and More
       </h1>
       <form
+        v-show="!submitted"
         action="https://dev.us6.list-manage.com/subscribe/post?u=d31c8c56a5b47cecaf8ca5fe7&amp;id=e325e27ac5"
         method="post"
         id="mc-embedded-subscribe-form"
@@ -45,10 +46,14 @@
               name="subscribe"
               id="mc-embedded-subscribe"
               class="button"
+              @click.prevent="handleClick"
             />
           </div>
         </div>
       </form>
+      <div v-if="submitted" :class="classes.alert">
+        Email submitted, subscription successful!
+      </div>
     </div>
   </div>
   <!--End mc_embed_signup-->
@@ -58,12 +63,19 @@
 export default {
   data() {
     return {
+      submitted: false,
       classes: {
-        section: '',
+        section: 'border-t-4 border-b-4 border-dashed border-black',
         sectionhead: 'text-xl py-2',
         inner: 'max-w-lg mx-auto py-20',
       },
     }
+  },
+  methods: {
+    handleClick() {
+      this.submitted = true
+      console.log('clicked')
+    },
   },
 }
 </script>
