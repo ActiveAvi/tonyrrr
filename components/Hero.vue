@@ -23,7 +23,9 @@
         I handle website design and development, all the while making it
         market-friendly through market research.
       </p>
-      <button :class="[classes.button]">Talk Business</button>
+      <a href="/contact"
+        ><button :class="[classes.button]">Talk Business</button></a
+      >
     </div>
   </div>
 </template>
