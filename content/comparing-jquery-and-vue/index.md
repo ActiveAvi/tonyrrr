@@ -1,7 +1,6 @@
 ---
 title: jQuery and Vue, a Comparison
 description: An in-depth comparison of two Js libraries, Vue and jQuery
-date: 2021-06-21
 image: jquery-and-vue.png
 tags:
   - webdev
@@ -9,7 +8,7 @@ tags:
 
 # jQuery and Vue, a Comparison
 
-![vue-jquery-comparison](./jquery-and-vue.png)
+![vue-jquery-comparison](~/assets/img/jquery-and-vue.png)
 
 ## jQuery... Who needs it?
 
