@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-purple-800 text-white">
+  <div class="bg-purple-800 text-white msm:mb-14">
     <the-tool-bar @scroll-up="handleScroll" />
     <scroll-up v-if="scrolling" />
     <nuxt />

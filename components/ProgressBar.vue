@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       classes: {
-        progressBar: 'bg-purple-300 sticky sm:absolute top-0',
+        progressBar: 'bg-purple-300 fixed sm:absolute top-0',
         filledBar: 'bg-green-600',
       },
     }

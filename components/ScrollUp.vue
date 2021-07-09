@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       classes: {
-        'scroll-up': 'fixed right-10 bottom-10 z-50',
+        'scroll-up': 'fixed right-10 bottom-20 sm:bottom-10 z-50',
         icon: 'cursor-pointer bg-indigo-900 bg-opacity-0  opacity-50 transition duration-500 hover:opacity-100 hover:shadow-lg transform hover:scale-110 p-2 rounded-full hover:bg-opacity-30',
       },
     }

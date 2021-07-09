@@ -30,9 +30,9 @@ export default {
       scrolling: false,
       classes: {
         header:
-          'sm:bg-gradient-to-b from-purple-900 to-purple-800 text-white fixed top-0 z-10 w-full',
-        flexbox: 'hidden sm:flex mx-auto container p-8',
-        brand: 'pl-10',
+          'bg-gradient-to-b from-purple-900 to-purple-800 text-white fixed msm:bottom-0  sm:top-0 z-10 w-full',
+        flexbox: 'sm:flex mx-auto container py-4 sm:p-8',
+        brand: 'msm:hidden pl-10',
         nav: 'mx-auto',
         ul: '',
         li: 'inline-block',

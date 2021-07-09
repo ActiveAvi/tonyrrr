@@ -42,7 +42,7 @@
                 <h3 :class="classes.postTitle">
                   {{ post.title }}
                 </h3>
-                <span>{{ post.createdAt }}</span>
+                <!-- <span>{{ post.createdAt }}</span> -->
               </div>
             </div>
           </nuxt-link>
@@ -70,7 +70,7 @@ export default {
   data() {
     return {
       classes: {
-        section: 'container m-auto pt-24',
+        section: 'container m-auto sm:pt-24 px-4',
         sectionTitle: 'text-2xl py-2 my-4 border-b-4 border-purple-400',
         // searchBox: '',
         // search: '',

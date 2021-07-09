@@ -3,7 +3,6 @@
     <article :class="classes.articleBody">
       <nuxt-content :document="article" />
     </article>
-    <div :class="classes.wrapper"></div>
     <nav :class="classes.toc">
       <ul :class="classes.list">
         <li
@@ -27,9 +26,9 @@ export default {
     return {
       classes: {
         article:
-          'md:flex justify-center mx-auto container w-full p-4 sm:min-w-lg',
-        articleBody: ' xl:w-max max-w-2xl prose dark:prose-dark',
-        toc: 'lg:fixed top-32 w-44 right-2 xl:right-10 max-w-xs opacity-60',
+          'sm:mt-24 sm:grid sm:grid-cols-4 justify-center mx-auto container w-full p-4 ',
+        articleBody: 'article-body sm:col-span-3 prose dark:prose-dark mx-auto',
+        toc: 'sticky h-20 top-28 max-w-xs opacity-60',
         list: 'list-none',
         item: '',
       },
@@ -52,4 +51,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.article-body {
+  width: inherit;
+}
+</style>
