@@ -24,6 +24,7 @@
 export default {
   data() {
     return {
+      title: 'TonyRrrs Blog',
       classes: {
         article:
           'sm:mt-24 sm:grid sm:grid-cols-4 justify-center mx-auto container w-full p-4 ',
@@ -40,12 +41,19 @@ export default {
       const [article] = await $content({ deep: true })
         .where({ dir: `/${params.slug}` })
         .fetch()
+
       return { article }
     } catch (err) {
       error({
         statusCode: 404,
         message: 'Page could not be found',
       })
+    }
+  },
+
+  head() {
+    return {
+      title: this.article.title,
     }
   },
 }
