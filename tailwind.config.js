@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         redviolet: '#C71585',
       },
+      screens: {
+        msm: { max: '639px' },
+      },
       spacing: {
         144: '34rem',
       },
