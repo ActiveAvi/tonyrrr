@@ -28,7 +28,7 @@ export default {
       classes: {
         article:
           'sm:mt-24 sm:grid sm:grid-cols-4 justify-center mx-auto container w-full p-4 ',
-        articleBody: 'article-body sm:col-span-3 prose dark:prose-dark mx-auto',
+        articleBody: 'article-body sm:col-span-3 prose prose-dark mx-auto',
         toc: 'sticky h-20 top-28 max-w-xs opacity-60',
         list: 'list-none',
         item: '',
